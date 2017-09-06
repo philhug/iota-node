@@ -5,7 +5,7 @@ WORKDIR /iri
 RUN git clone -b v1.3.2 https://github.com/iotaledger/iri.git /iri/
 RUN mvn clean package
 
-COPY conf /iri/conf
+COPY logback.xml /iri/
 COPY /docker-entrypoint.sh /
 
 WORKDIR /iri/data
