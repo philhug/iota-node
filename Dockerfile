@@ -2,8 +2,8 @@ FROM maven:3.5-jdk-8
 
 WORKDIR /iri
 
-RUN git clone -b v1.3.2.1 https://github.com/iotaledger/iri.git /iri/
-RUN mvn clean package
+RUN git clone -b v1.3.2.2 https://github.com/iotaledger/iri.git /iri/
+RUN mvn -q clean package
 
 COPY logback.xml /iri/
 COPY /docker-entrypoint.sh /
